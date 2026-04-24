@@ -4,7 +4,7 @@ import org.example.crop.Crop;
 
 import java.util.ArrayList;
 
-public class CropRow {
+public class  CropRow {
     private ArrayList<Crop> crops = new ArrayList<>();
 
     public void fertilizeAllCrops(){

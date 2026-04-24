@@ -23,8 +23,7 @@ public class Field {
 
     @Override
     public String toString() {
-        return "Field{" +
-                "cropRows=" + cropRows +
-                '}';
+        return "Field: " +
+                "Crop-Rows=" + cropRows.size();
     }
 }

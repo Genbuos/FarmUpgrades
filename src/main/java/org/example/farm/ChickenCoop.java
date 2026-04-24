@@ -3,6 +3,7 @@ package org.example.farm;
 import org.example.animal.Chicken;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class ChickenCoop {
     private ArrayList<Chicken> chickens;
@@ -23,8 +24,7 @@ public class ChickenCoop {
 
     @Override
     public String toString() {
-        return "ChickenCoop{" +
-                "chickens=" + chickens +
-                '}';
+        return "Chickens: " + getChickens().stream().map(Chicken::getAnimalName).collect(Collectors.joining(", "));
+
     }
 }

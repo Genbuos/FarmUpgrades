@@ -39,10 +39,9 @@ public class Farm {
 
     @Override
     public String toString() {
-        return "Farm{" +
-                "stables=" + stables +
-                ", chickenCoops=" + chickenCoops +
-                ", farmHouse=" + farmHouse +
-                '}';
+        return "Farm:" +
+                " Stables=" + stables.size() +
+                ", Chicken-coops=" + chickenCoops.size() + ", "
+               + farmHouse.toString();
     }
 }

@@ -3,6 +3,7 @@ package org.example.farm;
 import org.example.person.Person;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class FarmHouse {
     private ArrayList<Person> farmHands;
@@ -25,8 +26,7 @@ public class FarmHouse {
 
     @Override
     public String toString() {
-        return "FarmHouse{" +
-                "farmHands=" + farmHands +
-                '}';
+        return "Farmhouse workers: " + getFarmHands().stream().map(Person::getName).collect(Collectors.joining(", "));
+
     }
 }

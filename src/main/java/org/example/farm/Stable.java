@@ -1,8 +1,10 @@
 package org.example.farm;
 
+import org.example.animal.Animal;
 import org.example.animal.Horse;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Stable {
 
@@ -20,10 +22,12 @@ public class Stable {
         horses.add(horse);
     }
 
+    public ArrayList<Horse> getHorses(){
+        return horses;
+    }
+
     @Override
     public String toString() {
-        return "Stable{" +
-                "horses=" + horses +
-                '}';
+        return "Horses: " + getHorses().stream().map(Animal::getAnimalName).collect(Collectors.joining(", "));
     }
 }
