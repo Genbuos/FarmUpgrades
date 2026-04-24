@@ -29,4 +29,9 @@ public class Chicken extends Animal implements Produce {
             return null;
         }
     }
+
+    @Override
+    public void makeNoise() {
+        System.out.println(getAnimalName() + " says Cluck!");
+    }
 }

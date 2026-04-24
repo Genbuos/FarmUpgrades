@@ -18,4 +18,9 @@ public class Horse extends Animal implements Rideable {
     public void setInUse(boolean available) {
         this.inUse = available;
     }
+
+    @Override
+    public void makeNoise() {
+        System.out.println(getAnimalName() + " says neigh!");
+    }
 }

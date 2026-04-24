@@ -12,4 +12,7 @@ class PlotTest {
     @AfterEach
     void tearDown() {
     }
+
+
+    // Test the desired workflow of the functionality and inheritance.
 }
