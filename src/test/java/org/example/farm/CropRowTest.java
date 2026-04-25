@@ -45,9 +45,9 @@ class CropRowTest {
         assertEquals(expected, outputStreamCaptor.toString().trim());
 
 
-        assertTrue(cornStalk.isHasBeenFerilized());
-        assertTrue(cornStalk2.isHasBeenFerilized());
-        assertTrue(cornStalk3.isHasBeenFerilized());
+        assertTrue(cornStalk.isHasBeenFertilized());
+        assertTrue(cornStalk2.isHasBeenFertilized());
+        assertTrue(cornStalk3.isHasBeenFertilized());
     }
 
     @Test
@@ -66,9 +66,9 @@ class CropRowTest {
         cropRow.harvestAllCrops();
         assertEquals(expected, outputStreamCaptor.toString().trim());
         outputStreamCaptor.reset();
-        assertFalse(cornStalk.isHasBeenFerilized());
-        assertFalse(cornStalk2.isHasBeenFerilized());
-        assertFalse(cornStalk3.isHasBeenFerilized());
+        assertFalse(cornStalk.isHasBeenFertilized());
+        assertFalse(cornStalk2.isHasBeenFertilized());
+        assertFalse(cornStalk3.isHasBeenFertilized());
     }
 
 

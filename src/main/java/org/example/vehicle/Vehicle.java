@@ -14,6 +14,9 @@ public abstract class Vehicle implements Rideable, NoiseMaker {
         this.sound = sound;
     }
 
+    public Vehicle() {
+    }
+
     @Override
     public boolean isInUse() {
         return inUse;

@@ -9,7 +9,7 @@ public class CornStalk extends Crop{
 
     @Override
     public Edible yield() {
-     if(!isHasBeenFerilized()){
+     if(!isHasBeenFertilized()){
          System.out.println("Cornstalk cannot be harvested (Has not been fertilized !)");
          return null;
      }
@@ -20,7 +20,7 @@ public class CornStalk extends Crop{
      }
 
      System.out.println("Cornstalk has been harvested!");
-     setHasBeenFerilized(false);
+     setHasBeenFertilized(false);
      setHasBeenHarvested(true);
      return new Corn();
     }

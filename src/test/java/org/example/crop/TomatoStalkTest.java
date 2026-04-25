@@ -7,32 +7,44 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TomatoStalkTest {
+    private TomatoStalk tomatoStalk;
+
 
     @BeforeEach
     void setUp() {
+        tomatoStalk = new TomatoStalk();
     }
 
-    @AfterEach
-    void tearDown() {
-    }
 
     @Test
     void isHasBeenHarvested() {
+        assertFalse(tomatoStalk.isHasBeenHarvested());
     }
 
     @Test
     void setHasBeenHarvested() {
+        tomatoStalk.setHasBeenHarvested(true);
+
+        assertTrue(tomatoStalk.isHasBeenHarvested());
     }
 
     @Test
-    void isHasBeenFerilized() {
+    void isHasBeenFertilized() {
+        assertFalse(tomatoStalk.isHasBeenFertilized());
     }
 
     @Test
-    void setHasBeenFerilized() {
+    void setHasBeenFertilized() {
+        tomatoStalk.setHasBeenFertilized(true);
+
+        assertTrue(tomatoStalk.isHasBeenFertilized());
+
     }
 
     @Test
     void yield() {
+        tomatoStalk.setHasBeenFertilized(true);
+
+        assertInstanceOf(Tomato.class, tomatoStalk.yield());
     }
 }

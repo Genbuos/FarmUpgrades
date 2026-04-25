@@ -11,6 +11,9 @@ public class Tractor extends Vehicle implements FarmVehicle {
         super(id, sound);
     }
 
+    public Tractor() {
+    }
+
     public void harvest(Field field){
         if(!isInUse()){
             System.out.println(" Tractor is not in use!");

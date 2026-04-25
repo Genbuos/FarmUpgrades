@@ -1,5 +1,6 @@
 package org.example.person;
 
+import org.example.animal.Animal;
 import org.example.animal.Horse;
 import org.example.crop.Crop;
 import org.example.farm.CropRow;
@@ -14,7 +15,7 @@ public class Farmer extends Person implements Botanist, Rider {
 
     @Override
     public void makeNoise() {
-        System.out.println("Howdy, my name is" + this.getName());
+        System.out.println("Howdy, my name is " + this.getName());
     }
 
 
@@ -25,7 +26,7 @@ public class Farmer extends Person implements Botanist, Rider {
 
     @Override
     public void mount(Rideable object) {
-        if (object instanceof FarmVehicle){
+        if (object instanceof FarmVehicle || object instanceof Animal){
             if(object instanceof Tractor){
                 if(!object.isInUse()){
                     object.setInUse(true);
@@ -46,7 +47,7 @@ public class Farmer extends Person implements Botanist, Rider {
 
     @Override
     public void dismount(Rideable object) {
-        if (object instanceof FarmVehicle){
+        if (object instanceof FarmVehicle || object instanceof Animal){
             if(object instanceof Tractor){
                 if(object.isInUse() ){
                     object.setInUse(false);

@@ -10,7 +10,7 @@ public class TomatoStalk extends Crop{
 
     @Override
     public Edible yield() {
-        if(!isHasBeenFerilized()){
+        if(!isHasBeenFertilized()){
             System.out.println("Tomato plant cannot be harvested ( Has not been fertlized!)");
             return null;
         }
@@ -21,8 +21,8 @@ public class TomatoStalk extends Crop{
         }
 
         System.out.println("Tomato plant has been harvested!");
-        setHasBeenFerilized(false);
+        setHasBeenFertilized(false);
         setHasBeenHarvested(true);
-        return new Corn();
+        return new Tomato();
     }
 }
