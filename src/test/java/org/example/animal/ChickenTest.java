@@ -1,8 +1,6 @@
 package org.example.animal;
 
 import org.example.crop.Corn;
-import org.example.interfaces.Edible;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

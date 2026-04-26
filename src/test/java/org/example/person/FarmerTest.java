@@ -54,8 +54,8 @@ class FarmerTest {
     void setName() {
         farmer.setName("Jimii");
 
-        assertTrue(!Objects.equals(farmer.getName(), "Jordan"));
-        assertTrue(Objects.equals(farmer.getName(), "Jimii"));
+        assertNotEquals("Jordan", farmer.getName());
+        assertEquals("Jimii", farmer.getName());
 
 
     }

@@ -1,5 +1,6 @@
 package org.example.person;
 
+import org.example.animal.Animal;
 import org.example.animal.Horse;
 import org.example.farm.Field;
 import org.example.interfaces.FarmVehicle;
@@ -43,10 +44,11 @@ public class Pilot extends Person implements Rider {
 
     @Override
     public void mount(Rideable object) {
-        if (object instanceof FarmVehicle){
+        if (object instanceof FarmVehicle || object instanceof Animal){
             if(object instanceof CropDuster){
                 if(!object.isInUse()){
                     object.setInUse(true);
+                    setRiding(true);
                     System.out.println("Pilot has boarded Cropduster");
                 } else {
                     System.out.println("Plane is in use and cannot be mounted!");
@@ -54,6 +56,7 @@ public class Pilot extends Person implements Rider {
             } else if (object instanceof Horse){
                 if(!object.isInUse()){
                     object.setInUse(true);
+                    setRiding(true);
                     System.out.println("Horse is Mounted!");
                 } else {
                     System.out.println("The horse cannot be mounted!");
@@ -64,10 +67,11 @@ public class Pilot extends Person implements Rider {
 
     @Override
     public void dismount(Rideable object) {
-        if (object instanceof FarmVehicle){
+        if (object instanceof FarmVehicle || object instanceof Animal){
             if(object instanceof CropDuster){
                 if(object.isInUse() ){
                     object.setInUse(false);
+                    setRiding(false);
                     System.out.println("Pilot has dismounted Cropduster");
                 } else {
                     System.out.println("Plane is not in use and can be mounted!");
@@ -75,6 +79,7 @@ public class Pilot extends Person implements Rider {
             } else if (object instanceof Horse){
                 if(object.isInUse()){
                     object.setInUse(false);
+                    setRiding(false);
                     System.out.println("Horse is dismounted!");
                 } else {
                     System.out.println("The horse is not in use and can be mounted!");
