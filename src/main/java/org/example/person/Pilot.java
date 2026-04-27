@@ -33,9 +33,6 @@ public class Pilot extends Person implements Rider {
         isRiding = riding;
     }
 
-    public void fly(CropDuster plane, Field field){
-        plane.fly(field);
-    }
 
     @Override
     public void makeNoise() {

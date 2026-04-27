@@ -6,17 +6,15 @@ import org.example.crop.Tomato;
 import org.example.crop.TomatoStalk;
 import org.example.farm.CropRow;
 import org.example.vehicle.Tractor;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FarmerTest {
+class FarmerTractorTest {
     private Farmer farmer;
 
     private Tractor tractor;

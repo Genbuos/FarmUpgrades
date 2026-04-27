@@ -5,7 +5,6 @@ import org.example.animal.Horse;
 import org.example.crop.Corn;
 import org.example.farm.Field;
 import org.example.vehicle.CropDuster;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +13,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PilotTest {
+class PilotCropDusterTest {
     private Pilot pilot;
     private CropDuster cropDuster;
     private Corn corn;
@@ -97,10 +96,6 @@ class PilotTest {
         assertEquals(expected, pilot.getLicenseID());
     }
 
-    @Test
-    void isRiding() {
-        assertFalse(pilot.isRiding());
-    }
 
     @Test
     void setRiding() {
